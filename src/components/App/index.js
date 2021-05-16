@@ -34,9 +34,9 @@ const App = () => {
             </div>
             <section>
               {
-                tasks.map((iteam) => {
+                tasks.map((iteam, index) => {
                   return (
-                    <TaskItem iteam={iteam} onRemove={ removeHandler(iteam) }/>
+                    <TaskItem key={index} iteam={iteam} onRemove={ removeHandler(iteam) }/>
                   )
                 })
               }
